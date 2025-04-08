@@ -6,6 +6,8 @@
     <title>Art & Deco - Muebles Residenciales</title>
     <!-- Google Fonts para tipografía moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome para los íconos de redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Estilos generales */
         body {
@@ -79,12 +81,37 @@
             color: #555;
         }
 
+        /* Enlace en el subtítulo */
+        .service-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .service-item a:hover {
+            color: #ff6347;
+        }
+
         /* Footer */
         footer {
             text-align: center;
             padding: 20px;
             background-color: #333;
             color: white;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons a {
+            margin: 0 15px;
+            font-size: 2em;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #ff6347; /* Rojo tomate */
         }
 
         /* Responsividad */
@@ -136,15 +163,21 @@
     <h2>Nuestros Servicios</h2>
 
     <div class="service-item">
-        <h3>Closets Personalizados</h3>
+        <a href="catalogo.html">
+            <h3>Closets Personalizados</h3>
+        </a>
         <p>Diseñamos closets funcionales y estéticos, adaptados a tus necesidades.</p>
     </div>
     <div class="service-item">
-        <h3>Cocinas Modernas</h3>
+        <a href="catalogo.html">
+            <h3>Cocinas Modernas</h3>
+        </a>
         <p>Creación de cocinas modernas, funcionales y de alta calidad para tu hogar.</p>
     </div>
     <div class="service-item">
-        <h3>Muebles de TV</h3>
+        <a href="catalogo.html">
+            <h3>Muebles de TV</h3>
+        </a>
         <p>Muebles a medida para que tu sala luzca increíble y funcional.</p>
     </div>
 </div>
@@ -152,8 +185,12 @@
 <!-- Footer -->
 <footer>
     <p>&copy; 2025 Art & Deco. Todos los derechos reservados.</p>
+    <div class="social-icons">
+        <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/artdeco" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@artdeco" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
 </footer>
 
 </body>
 </html>
-
