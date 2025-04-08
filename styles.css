@@ -1,64 +1,159 @@
-////prueba 1
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://github.com/ARTDECOMPANY/art-deco/blob/main/Logotipo%202025.jpg?raw=true');
-     background-size: cover; /* Para que la imagen cubra toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-color: #ADD8E6;
-    color: #333
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art & Deco - Muebles Residenciales</title>
+    <!-- Google Fonts para tipografía moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://github.com/ARTDECOMPANY/art-deco/blob/main/Logotipo%202025.jpg?raw=true');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #ADD8E6;
+            color: #333;
+            line-height: 1.6;
+        }
 
-header {
-    background-color: rgba(255, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-}
+        /* Encabezado */
+        header {
+            background-color: rgba(255, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 3.5em;
-}
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+        }
 
-header p {
-    font-size: 1.2em;
-}
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
 
-.services {
-    text-align: center;
-    margin: 50px 0;
-}
+        /* Sección de servicios (muebles residenciales) */
+        .services {
+            text-align: center;
+            margin: 60px 20px;
+            padding: 0 10px;
+        }
 
-.services h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
+        .services h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
 
-.service-item {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 40%;
-}
+        .service-item {
+            background-color: white;
+            padding: 25px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 30%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.service-item h3 {
-    font-size: 1.5em;
-    color: #333;
-}
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+        .service-item h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .service-item p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .services h2 {
+                font-size: 2em;
+            }
+
+            .service-item {
+                width: 45%; /* Dos columnas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .service-item {
+                width: 100%; /* Una columna */
+                margin: 10px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Encabezado -->
+<header>
+    <h1>Art & Deco</h1>
+    <p>Muebles Residenciales & Diseño de Interiores</p>
+</header>
+
+<!-- Sección de Servicios -->
+<div class="services">
+    <h2>Nuestros Servicios</h2>
+
+    <div class="service-item">
+        <h3>Closets Personalizados</h3>
+        <p>Diseñamos closets funcionales y estéticos, adaptados a tus necesidades.</p>
+    </div>
+    <div class="service-item">
+        <h3>Cocinas Modernas</h3>
+        <p>Creación de cocinas modernas, funcionales y de alta calidad para tu hogar.</p>
+    </div>
+    <div class="service-item">
+        <h3>Muebles de TV</h3>
+        <p>Muebles a medida para que tu sala luzca increíble y funcional.</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Art & Deco. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
+
