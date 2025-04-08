@@ -1,63 +1,82 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://github.com/ARTDECOMPANY/art-deco/blob/main/Logotipo%202025.jpg?raw=true');
-     background-size: cover; /* Para que la imagen cubra toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-color: #ADD8E6;
-    color: #333
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art & Deco - Muebles Residenciales</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-header {
-    background-color: rgba(255, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-}
+        /* Estilo para el encabezado */
+        header {
+            background-color: rgba(255, 0, 0, 0.7); /* Rojo con 70% de opacidad */
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 3.5em;
-}
+        /* Estilo para la sección de Muebles Residenciales */
+        #muebles-residenciales {
+            padding: 40px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
 
-header p {
-    font-size: 1.2em;
-}
+        #muebles-residenciales ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-.services {
-    text-align: center;
-    margin: 50px 0;
-}
+        #muebles-residenciales li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
 
-.services h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
+        /* Estilo para la sección del Catálogo */
+        #catalogo {
+            padding: 40px;
+            background-color: #e1e1e1;
+            text-align: center;
+            display: none; /* Inicialmente está oculto */
+            margin-top: 50px;
+        }
 
-.service-item {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 40%;
-}
+        #catalogo h3 {
+            font-size: 2em;
+        }
 
-.service-item h3 {
-    font-size: 1.5em;
-    color: #333;
-}
+        #catalogo ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    position: fixed;
+        #catalogo li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        /* Estilo para el enlace que despliega el catálogo */
+        .catalog-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF0000;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .catalog-link:hover {
+            background-color: #D32F2F;
+        }
+
+    </style>
+</head>
     width: 100%;
     bottom: 0;
 }
