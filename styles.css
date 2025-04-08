@@ -1,73 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art & Deco - Muebles Residenciales</title>
+    <!-- Google Fonts para una tipografía moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         /* Estilos Generales */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
         }
 
-        /* Estilo para el encabezado */
+        /* Encabezado */
         header {
-            background-color: rgba(255, 0, 0, 0.7); /* Rojo con 70% de opacidad */
+            background-color: #FF3B30; /* Rojo brillante */
             color: white;
             text-align: center;
-            padding: 50px 0;
+            padding: 60px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Estilo para la sección de Muebles Residenciales */
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Sección de Muebles Residenciales */
         #muebles-residenciales {
-            padding: 40px;
-            background-color: #f4f4f4;
+            padding: 60px 20px;
             text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: -40px; /* Para que se superponga un poco al encabezado */
+        }
+
+        #muebles-residenciales h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
         }
 
         #muebles-residenciales ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         #muebles-residenciales li {
-            font-size: 1.2em;
+            font-size: 1.5em;
             margin: 10px 0;
-        }
-
-        /* Estilo para la sección del Catálogo */
-        #catalogo {
-            padding: 40px;
-            background-color: #e1e1e1;
+            flex: 1 1 200px; /* Adaptable */
             text-align: center;
-            display: none; /* Inicialmente está oculto */
-            margin-top: 50px;
         }
 
-        #catalogo h3 {
-            font-size: 2em;
-        }
-
-        #catalogo ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #catalogo li {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-
-        /* Estilo para el enlace que despliega el catálogo */
         .catalog-link {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #FF0000;
+            padding: 12px 24px;
+            background-color: #FF3B30;
             color: white;
-            text-decoration: none;
             font-size: 1.2em;
-            margin-top: 20px;
-            border-radius: 5px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 30px;
             transition: background-color 0.3s ease;
         }
 
@@ -75,8 +81,127 @@
             background-color: #D32F2F;
         }
 
+        /* Sección del Catálogo */
+        #catalogo {
+            display: none; /* Inicialmente oculto */
+            padding: 60px 20px;
+            background-color: #eeeeee;
+            text-align: center;
+        }
+
+        #catalogo h3 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        /* Contenedor de tarjetas para productos */
+        .catalogo-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .card h4 {
+            font-size: 1.8em;
+            margin: 0 0 10px;
+        }
+
+        .card p {
+            font-size: 1.1em;
+            color: #666;
+        }
+
     </style>
 </head>
-    width: 100%;
+<body>
+
+<!-- Encabezado -->
+<header>
+    <h1>Bienvenidos a Art & Deco</h1>
+    <p>Diseños exclusivos de muebles para tu hogar</p>
+</header>
+
+<!-- Sección de Muebles Residenciales -->
+<section id="muebles-residenciales">
+    <h2>Muebles Residenciales</h2>
+    <p>Ofrecemos una amplia variedad de muebles para tu hogar, incluyendo:</p>
+    <ul>
+        <li>Closets</li>
+        <li>Cocinas</li>
+        <li>Muebles de TV</li>
+        <li>Muebles de baño</li>
+    </ul>
+    <!-- Enlace que despliega el catálogo -->
+    <a href="javascript:void(0);" class="catalog-link" onclick="toggleCatalog()">Ver catálogo</a>
+</section>
+
+<!-- Sección del Catálogo (inicialmente oculta) -->
+<section id="catalogo">
+    <h3>Catálogo de Muebles</h3>
+    <div class="catalogo-cards">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Closet Moderno">
+            <div class="card-content">
+                <h4>Closet Moderno</h4>
+                <p>Un closet elegante con amplio espacio de almacenamiento y un diseño minimalista.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Cocina Minimalista">
+            <div class="card-content">
+                <h4>Cocina Minimalista</h4>
+                <p>Diseño limpio y funcional para tu cocina, ideal para maximizar el espacio.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Mueble de TV">
+            <div class="card-content">
+                <h4>Mueble de TV</h4>
+                <p>Mueble elegante y funcional para tu sala de estar.</p>
+            </div>
+        </div>
+        <!-- Agrega más productos según sea necesario -->
+    </div>
+</section>
+
+<!-- Script para mostrar u ocultar el catálogo -->
+<script>
+    function toggleCatalog() {
+        var catalogSection = document.getElementById('catalogo');
+        if (catalogSection.style.display === "none" || catalogSection.style.display === "") {
+            catalogSection.style.display = "block";
+        } else {
+            catalogSection.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
+00%;
     bottom: 0;
 }
